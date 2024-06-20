@@ -17,10 +17,22 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".", // Add this line
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@theia/*": [
+        "node_modules/@theia/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "theia/src-gen/frontend/index.ts"
+  ],
   "exclude": ["node_modules"]
 }
